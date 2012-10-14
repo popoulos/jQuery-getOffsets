@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Offset Checker</title>
+<style>
+	body, html{
+		margin:0;
+		padding:0;
+	}
+	
+	#element{
+		margin:15px 0 0 28px;
+	}
+</style>
+</head>
+
+<body>
+<div id="element">Offset Checker</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/getOffsets.1.0.js"></script>
+<script>
+$(document).ready(function(){
+	// Default, get all positions relative to the HTML document
+	var distances = $("#element").getOffsets();
+	
+	// Get the position from the top relative to the HTML document
+	var distances = $("#element").getOffsets({directions : ['top']});
+	
+	// Get the position from the bottom and right relative to the HTML document
+	var distances = $("#element").getOffsets({directions : ['bottom', 'right']});
+	
+	// Get the position from the top relative to it's parent
+	var distances = $("#element").getOffsets({directions : ['bottom'], offsetOfParent : true});
+	
+	// Get the position from the bottom and right relative to it's parent
+	var distances = $("#element").getOffsets({directions : ['left', 'right'], offsetOfParent : true});
+});
+</script>
+</body>
+</html>
