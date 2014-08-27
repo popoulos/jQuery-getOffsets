@@ -20,7 +20,7 @@
 			}
 			if($.inArray('right',options.directions) !== -1)
 			{
-				windowWidth = $(window).outerWidth();
+				windowWidth = $(document).outerWidth();
 				objectWidth = $(obj).width();
 				objectOffsetLeft = objectPosition.left;
 				rightOffsetInPixels = windowWidth - objectWidth - objectOffsetLeft;
@@ -33,7 +33,7 @@
 			}
 			if($.inArray('bottom',options.directions) !== -1)
 			{
-				windowHeight = $(window).outerHeight();
+				windowHeight = $(document).outerHeight();
 				objectHeight = $(obj).height();
 				objectOffsetTop = objectPosition.top;
 				bottomOffsetInPixels = windowHeight - objectHeight - objectOffsetTop;
@@ -51,7 +51,7 @@
 			}
 			if($.inArray('right',options.directions) !== -1)
 			{
-				windowWidth = $(window).outerWidth();
+				windowWidth = $(document).outerWidth();
 				objectWidth = $(obj).width();
 				objectOffsetLeft = objectOffset.left;
 				rightOffsetInPixels = windowWidth - objectWidth - objectOffsetLeft;
@@ -64,7 +64,7 @@
 			}
 			if($.inArray('bottom',options.directions) !== -1)
 			{
-				windowHeight = $(window).outerHeight();
+				windowHeight = $(document).outerHeight();
 				objectHeight = $(obj).height();
 				objectOffsetTop = objectOffset.top;
 				bottomOffsetInPixels = windowHeight - objectHeight - objectOffsetTop;
